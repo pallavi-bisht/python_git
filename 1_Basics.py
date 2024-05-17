@@ -1,6 +1,10 @@
 print("Hello Python world")
 print("hello")
-a= 'Pallavi'
+
+# String
+a= 'allavi'
 b= 'Bisht'
 fn= f"{a} {b}" 
 print("Hello",fn)
+c='Hello '
+print(c.)
