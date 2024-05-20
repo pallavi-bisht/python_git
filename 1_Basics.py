@@ -19,3 +19,12 @@ ABC= 20 # put all letter CAPS for constantaa
 print(ABC)
 print (bool(not ABC))
 print
+
+
+
+pqr=[]  
+pqr=[i for i in range(1,1000001)]
+
+print(max(pqr))
+print(min(pqr))
+print(sum(pqr))
