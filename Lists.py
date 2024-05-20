@@ -79,6 +79,56 @@ cube=[i**3 for i in range(1,11)]
 for i in range(0,10):
  print(cube[i])
 
+# slicing
+cube=[i**3 for i in range(1,11)]
+print(cube)
+print(cube[:3] ) #top3
+print(cube[-3:]) #last3
+print(cube[2:4]) #between 2,4 , 2 inclusive
+print(cube[::2]) # valune in every 2 place
+
+#looping in slice
+cube=[i**3 for i in range(1,11)]
+print(cube)
+for i in cube[1:6]:
+  print(i*10)
+
+#copying List
+
+#1 with keeing two indpendent list then use slice 
+cube=[i**3 for i in range(1,11)]
+copy_cube=cube[::3]
+print(copy_cube)
+ 
+#2 copied list will poin to same reference and if change made to to one 
+#list it will automatically change the copied cube
+
+cube=[i**3 for i in range(1,11)]
+copy_cube=cube
+print (copy_cube)
+cube.append(29)
+print(copy_cube)
+
+
+#TRy it yourself page 65
+cube=[i**3 for i in range(1,11)]
+print(cube)
+print(f"the first 3 item in the list are {cube[:3]}")
+print(f"the last 3 item in the list are {cube[-3:]}")
+a= (len(cube)/2)-1
+b=(len(cube)/2)+2
+print (f"{a,b}")
+print(f"the middle 3 item in the lis are {cube[int(a):int(b)]}")
+
+
+
+
+
+
+
+
+
+
 
 
 
