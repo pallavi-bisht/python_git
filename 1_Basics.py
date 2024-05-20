@@ -17,5 +17,5 @@ l,k,m='jnd','edmn','ed'
 print(l,k,m)
 ABC= 20 # put all letter CAPS for constantaa
 print(ABC)
-
-
+print (bool(not ABC))
+print
