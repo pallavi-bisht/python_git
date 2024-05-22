@@ -162,6 +162,29 @@ for i in guest:
 del guest[0:2]
 print(guest)
    
+#TRy yourself pg 45
+
+Dest=['Switzerland','Italy','Amalfi','Goa','Garhwal']
+print(Dest)
+print(sorted(Dest))
+print(Dest)  #no modification to original list
+print(sorted(Dest,reverse=True))
+print(Dest)  
+Dest.reverse()
+print(Dest)
+Dest.reverse()
+print(Dest) #back to original list
+Dest.sort()
+print(Dest)
+Dest.sort(reverse=True)
+print(Dest)
+
+guest=['Kohli','Virat','Thor','sharukh']
+print(f"Iam inviting {len(guest)} guests today.")
+
+
+#TRy it yourself page
+
 
 
   
