@@ -62,7 +62,7 @@ print(pal)
 pal=[i for i in range(0,100,5)]
 print(pal)
 
-#TRy it your self
+#TRy it your self page 60
 kcb=[]
 for i in range(0,20):
  kcb.append(i+1)
@@ -126,7 +126,7 @@ print (f"{a,b}")
 print(f"the middle 3 item in the lis are {cube[int(a):int(b)]}")
 
 
-# try it yourself pg41
+# try it yourself pg 41
 
 guest=['Kohli','Virat','Thor','sharukh']
 k= guest.index('Kohli')
@@ -182,8 +182,6 @@ print(Dest)
 guest=['Kohli','Virat','Thor','sharukh']
 print(f"Iam inviting {len(guest)} guests today.")
 
-
-#TRy it yourself page
 
 
 
