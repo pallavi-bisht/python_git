@@ -7,14 +7,19 @@ print(abc[-1])
 abc.append('pallavi')
 print(abc)
 
+#del statment
+abc=[1,2,3,"sing"]
+del abc[0]
+print(abc)
+
 #delete  by position
 abc=[1,2,3,"sing"]
 pop_abc=abc.pop(0)
 print(f"{abc} {pop_abc}")
 
 #delete by value
-abc=[1,2,3,"sing"]
-abc.remove("sing")
+abc=[1,2,3,"sing","sing"]
+abc.remove("sing")# remove only 1st occurence of sing
 print(abc)
 
 #legnth of list
@@ -119,6 +124,48 @@ a= (len(cube)/2)-1
 b=(len(cube)/2)+2
 print (f"{a,b}")
 print(f"the middle 3 item in the lis are {cube[int(a):int(b)]}")
+
+
+# try it yourself pg41
+
+guest=['Kohli','Virat','Thor','sharukh']
+k= guest.index('Kohli')
+for i in guest:
+  print(f"{i} welcome to my Party!!")
+
+print(f"\n{guest[k]}  couldn't make it!!\n") 
+
+guest.remove('Kohli')
+guest.insert(k,"karan")
+for i in guest:
+  print(f"{i} welcome to my Party!!\n")
+
+print("We have found a new bigger table!\n")  
+
+guest.insert(0,'Diksha')
+guest.insert(int(len(guest)/2),'Varun')
+guest.append('shweta')
+
+for i in guest:
+  print(f"{i} welcome to my Party!!")
+
+print("\n Sorry I can invite only 2 people\n") 
+
+for i in range(0,len(guest)):
+  if len(guest)>2:
+   name= guest.pop()
+   print(f"{name},sorry your have to leave!\n")
+
+for i in guest:
+  print(f"{i} You are still invited to my Party!!")
+
+del guest[0:2]
+print(guest)
+   
+
+
+  
+
 
 
 
