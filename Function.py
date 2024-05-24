@@ -80,6 +80,58 @@ def show_messages(a,b):
 msgs_list=["how",'hi','hello']
 sent_messages=print_msgs(msgs_list)
 show_messages(msgs_list,sent_messages)
+#to send only copy of list
+def print_msgs(msgs):
+    sent_messages=[]
+    while msgs:
+        i=msgs.pop() 
+        print(f" Sent message {i}!\n")
+        sent_messages.append(i)
+    return sent_messages
+def show_messages(a,b):        
+    print(a)
+    print(b)
+
+msgs_list_1=["abc",'pqr','lmn']
+sent_messages=print_msgs(msgs_list_1[:])
+show_messages(msgs_list_1,sent_messages)
+
+#TIY 149
+def make_snadwitch(*arg):
+    for i in arg: #arg is tuple by default with one *
+        print(f" Making {i} sandwitch now.\n")
+
+make_snadwitch('veg','peas','corn')
+
+
+def build_profile(f_name,l_name,**info):  #info becomes dictionary  with ** and can have multiple arguments
+    info['first_name']=f_name
+    info['last_name']=l_name
+    return info
+
+abc=build_profile('pallavi', 'bisht',age=30,address='kharadi')
+print(abc)
+
+
+#TIY 154
+
+import Print  as p
+
+msgs_list=["how",'hi','hello']
+sent_messages=p.print_msgs(msgs_list)
+p.show_messages(msgs_list,sent_messages)
+
+from  Print  import print_msgs as p,show_messages as s
+
+msgs_list=["jhs",'wms','wms']
+sent_messages=p(msgs_list)
+s(msgs_list,sent_messages)
+
+
+
+
+
+
 
  
 
