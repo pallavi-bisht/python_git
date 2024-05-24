@@ -56,6 +56,31 @@ while True:
  New_album_3=make_album(artist_name,album_name)
  print(New_album_3)
  
+
+ #TIY 146
+
+def show_messages(msgs):
+    for i in msgs:
+        print(f"Hello {i}!")
+msgs_list=["dgjed",'asjghdq','wdjbkdj']
+show_messages(msgs_list)
+
+
+def print_msgs(msgs):
+    sent_messages=[]
+    while msgs:
+        i=msgs.pop() 
+        print(f" Sent message {i}!\n")
+        sent_messages.append(i)
+    return sent_messages
+def show_messages(a,b):        
+    print(a)
+    print(b)
+
+msgs_list=["how",'hi','hello']
+sent_messages=print_msgs(msgs_list)
+show_messages(msgs_list,sent_messages)
+
  
 
 
