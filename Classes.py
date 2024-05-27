@@ -235,8 +235,18 @@ my_leaf.battery.get_range()
 my_leaf.battery.upgrade_battery()
 my_leaf.battery.get_range()
 
-        
+ #TIY 179  
+from Restuarant import Restaurant as R
 
+ghi= R('Google','fried')
+ghi.describe_rest()
+
+#from User import User
+from admin_privileges import admin as a,privileges as p
+
+dfg=a('Hari','sharma',30)
+dfg.describe_user()
+dfg.priv.show_prvileges()
 
 
 
