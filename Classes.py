@@ -248,6 +248,44 @@ dfg=a('Hari','sharma',30)
 dfg.describe_user()
 dfg.priv.show_prvileges()
 
+#TIY 180
+from random import randint
+class die:
+
+  def __init__(self,side=6):
+    self.side=side
+  def roll_die(self):
+    x = randint(1,self.side)
+    return x
+
+xyz=die(20)
+print(xyz.roll_die())
+
+
+from random import choices
+
+option=[1,3,4,7,33,22,77,2,8,'a','k','l','p']
+my_ticket=[4,7,2,'p']
+i=0
+while True:
+    if my_ticket ==choices(option,k=4):
+        break
+    else:
+        i=i+1
+print(f"{i} these many turns it took for you to win!")        
+
+
+
+
+
+
+
+
+
+      
+
+      
+
 
 
 
