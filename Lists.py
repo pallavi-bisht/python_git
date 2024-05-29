@@ -19,6 +19,7 @@ print(f"{abc} {pop_abc}")
 
 #delete by value
 abc=[1,2,3,"sing","sing"]
+print(abc)
 abc.remove("sing")# remove only 1st occurence of sing
 print(abc)
 
@@ -39,6 +40,7 @@ print(abc)
 
 #looping
 magicians = ['alice', 'david', 'carolina']
+print ("/".join(magicians))  
 for magician in magicians:
  print(f" {magician.title()},that was a great trick!\n")
 

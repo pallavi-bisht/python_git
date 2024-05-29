@@ -262,9 +262,12 @@ xyz=die(20)
 print(xyz.roll_die())
 
 
-from random import choices
+from random import choices, choice
 
-option=[1,3,4,7,33,22,77,2,8,'a','k','l','p']
+option2=['apply','wait']
+print(choice(option2))
+
+option=["1,3,4,7,33,22,77,2,8,'a','k','l','p'"]
 my_ticket=[4,7,2,'p']
 i=0
 while True:
