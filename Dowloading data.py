@@ -1,4 +1,4 @@
-from pathlib import Path
+"""from pathlib import Path
 import csv
 from datetime import datetime
 import matplotlib.pyplot as plt
@@ -111,3 +111,22 @@ for i in all_dict :
 
 fig=px.scatter_geo(lat=lats,lon=long,size=mag,projection='natural earth',color=mag,hover_name=title,labels={'color':'Magnitude'})
 fig.show()
+"""
+import seaborn as sn
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+datas= pd.read_csv('data.csv')
+fig,ax=plt.subplots()
+"""
+plt.scatter(x=datas['win_by_runs'],y=datas['win_by_wickets'])
+plt.show()
+"""
+
+print(datas[['win_by_runs','win_by_wickets','season']].corr())
+
+#sn.heatmap(datas[['win_by_runs','win_by_wickets','season']].corr(),annot=True)
+sn.pairplot(datas[['win_by_runs','win_by_wickets','season']])
+
+plt.show()
