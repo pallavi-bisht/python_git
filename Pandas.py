@@ -1,8 +1,8 @@
-import pandas as pd
+"""import pandas as pd
 
 data = pd.read_csv('data.csv')
 k=data.head(10)
-"""print(k)
+print(k)
 
 print(data.columns)
 
@@ -49,4 +49,66 @@ print(data.groupby(['winner','win_by']).mean(['win_by_runs']))    #give all colu
 
  """
    
+
+#exercise pg60
+
+import pandas as pd
+from datetime import datetime as dt
+import math
+import seaborn as sn
+import matplotlib.pyplot as plt
+
+
+Bolly_data=pd.read_csv('bollywood.csv')
+"""print(Bolly_data.info())
+
+print(Bolly_data.info())
+print(Bolly_data.shape)
+
+print(Bolly_data.value_counts('Genre',ascending=True))
+print(Bolly_data.value_counts('Genre',ascending=False)[0:1])
+
+
+k=pd.crosstab(Bolly_data['Genre'],Bolly_data['ReleaseTime'],dropna=False)
+print(k)
+
+
+
+Bolly_data['Mon_Release']=pd.DatetimeIndex(Bolly_data['Release Date']).month
+print(Bolly_data['Mon_Release'])
+
+print(Bolly_data.value_counts('Mon_Release'))
+
+
+Bolly_data['Mon_Release']=pd.DatetimeIndex(Bolly_data['Release Date']).month
+print(Bolly_data[Bolly_data['Budget']>=25].value_counts('Mon_Release')[0:1])
+
+Bolly_data['ROI']= (Bolly_data['BoxOfficeCollection']-Bolly_data['Budget'])/Bolly_data['Budget']
+#print(Bolly_data.sort_values(by='ROI',ascending=False)[['MovieName','ROI']][0:10])
+
+print(Bolly_data.groupby(['ReleaseTime'])['ROI'].mean())
+
+
+#plt.hist(x=Bolly_data['Budget'])
+#sn.distplot(Bolly_data['Budget'])
+Bolly_data['ROI']= (Bolly_data['BoxOfficeCollection']-Bolly_data['Budget'])/Bolly_data['Budget']
+#sn.distplot(Bolly_data[Bolly_data['Genre'].str.strip()=='Drama']['ROI'],color='r',label='Drama')
+#sn.distplot(Bolly_data[Bolly_data['Genre']=='Comedy']['ROI'],color='y',label='Comedy')
+#sn.boxplot(x='Genre',y='ROI',data=Bolly_data)
+
+plt.legend()"""
+
+#plt.scatter(x='BoxOfficeCollection' , y='YoutubeLikes',data=Bolly_data,)
+#sn.regplot(x='BoxOfficeCollection' , y='YoutubeLikes',data=Bolly_data,)
+#sn.barplot(x='YoutubeLikes',y='Genre',data=Bolly_data)
+
+#sn.pairplot(Bolly_data[['Budget','BoxOfficeCollection',	'YoutubeViews',	'YoutubeLikes',	'YoutubeDislikes']],dropna=False)
+sn.heatmap(Bolly_data[['Budget','BoxOfficeCollection',
+	'YoutubeViews',	'YoutubeLikes',	'YoutubeDislikes']].corr(),annot=True)
+print(Bolly_data[['Budget','BoxOfficeCollection',
+	'YoutubeViews',	'YoutubeLikes',	'YoutubeDislikes']].corr())
+plt.show()
+
+
+
 

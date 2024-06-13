@@ -130,3 +130,5 @@ print(datas[['win_by_runs','win_by_wickets','season']].corr())
 sn.pairplot(datas[['win_by_runs','win_by_wickets','season']])
 
 plt.show()
+
+
