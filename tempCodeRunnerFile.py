@@ -126,7 +126,8 @@ sn.distplot(sa[sa['chd']=='Si']['tobacco'],color='y',label='si')
 sn.distplot(sa[sa['chd']=='No']['tobacco'],color='r',label='no')
 plt.legend()
 """
-sn.heatmap(sa[['sbp','obesity','age',	'ldl']].corr(),annot=True)
+sn.heatmap(sa[['sbp','obesity',
+	'age',	'ldl']].corr(),annot=True)
 plt.show()
 
 
