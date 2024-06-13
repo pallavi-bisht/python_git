@@ -116,7 +116,7 @@ import seaborn as sn
 import matplotlib.pyplot as plt
 
 sa= pd.read_csv('SAheart.csv')
-print(sa.info())
+#print(sa.info())
 """sn.catplot(x='famhist',kind='count',hue='chd',data=sa)
 
 sn.heatmap(sa[['age','sbp']].corr(),annot=True)
@@ -125,9 +125,30 @@ sn.heatmap(sa[['age','sbp']].corr(),annot=True)
 sn.distplot(sa[sa['chd']=='Si']['tobacco'],color='y',label='si')
 sn.distplot(sa[sa['chd']=='No']['tobacco'],color='r',label='no')
 plt.legend()
-"""
+
 sn.heatmap(sa[['sbp','obesity','age',	'ldl']].corr(),annot=True)
 plt.show()
+"""
+k=list(sa['age'])
+m=[]
+for j in k:
+    if j in  range(0,15):
+        m.append('young')
+    elif j in  range(15,35):
+        m.append('adults')
+    elif j  in  range(35,55):
+        m.append('mid')
+    else:
+        m.append('old')
+
+sa['agegroup'] = m  
+mn=sa[sa['chd']=='Si'][:]
+#sn.catplot(x='agegroup',kind='count', data=mn,col_order='agegroup')
+sn.boxplot(x='ldl',y='agegroup',data=sa)
+plt.show()
+
+
+
 
 
 
